@@ -4,10 +4,8 @@
       'text-decoration': todo.done ? 'line-through' : 'none'
     }"
   >
+    <input type="checkbox" v-model="todo.done" />
     {{ todo.text }}
-    <button @click="todo.done = !todo.done">
-      Done
-    </button>
     <button @click="todoModel = { ...todo }">
       Edit
     </button>
