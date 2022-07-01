@@ -29,7 +29,7 @@ export const useStore = defineStore('todos', {
     },
 
     updateTodo (id) {
-      this.todos.find(_ => _.id === id).text = this.todo.text
+      !!this.todo.text && this.todos.find(_ => _.id === id).text = this.todo.text
       this.resetTodo()
     },
 
