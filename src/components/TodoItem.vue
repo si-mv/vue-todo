@@ -4,13 +4,18 @@
       'text-decoration': todo.done ? 'line-through' : 'none'
     }"
   >
-    <input type="checkbox" v-model="todo.done" />
-    {{ todo.text }}
+    <span>
+      <input
+        type="checkbox"
+        v-model="todo.done"
+      />
+    </span>
+    <span class="text">{{ todo.text }}</span>
     <button @click="todoModel = { ...todo }">
-      Edit
+      <span class="material-icons">edit</span>
     </button>
     <button @click="deleteTodo(todo.id)">
-      Delete
+      <span class="material-icons">delete</span>
     </button>
   </li>
 </template>
@@ -38,6 +43,29 @@ export default {
 
 <style scoped>
 li {
-  margin-top: 0.5em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  height: 1.5em;
+  width: 1.5em;
+  accent-color: indigo;
+}
+
+.text {
+  margin-left: 1em;
+  flex-grow: 1;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin-left: 0.5em;
+}
+
+button:hover {
+  cursor: pointer;
 }
 </style>

@@ -4,6 +4,7 @@
   >
     <input
       v-model="todo.text"
+      class="text-input"
       type="text"
       placeholder="Add your todo..."
     />
@@ -29,3 +30,30 @@ export default {
 
 }
 </script>
+
+<style scoped>
+form {
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.text-input {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+button {
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 5%;
+  margin-left: 0.5em;
+  background-color: indigo;
+  color: whitesmoke;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+</style>
