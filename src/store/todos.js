@@ -24,7 +24,7 @@ export const useStore = defineStore('todos', {
     },
 
     createTodo () {
-      this.todos.push({ ...this.todo, id: nanoid() })
+      !!this.todo.text && this.todos.push({ ...this.todo, id: nanoid() })
       this.resetTodo()
     },
 
