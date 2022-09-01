@@ -48,7 +48,7 @@ button {
   padding: 12px;
   border-radius: 5%;
   margin-left: 0.5em;
-  background-color: rgb(7, 130, 0);
+  background-color: rgb(0, 130, 126);
   color: whitesmoke;
   border: none;
 }
